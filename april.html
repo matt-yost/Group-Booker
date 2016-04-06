@@ -1,0 +1,55 @@
+<template name="april">
+  <div class="container">
+    {{#each april}}
+    <div class="row">
+      <div class="col-md-2">
+        <label>Group Name</label>
+        <p>{{groupName}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Group Date</label>
+        <p>{{groupMonth}} {{groupDay}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Time Slot</label>
+        <p>{{timeslot}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Number of Guest</label>
+        <p>{{numberOfGuest}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Contact Name</label>
+        <p>{{contactName}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Contact Email</label>
+        <p>{{contactEmail}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <label>Phone Number</label>
+        <p>{{phoneNumber}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Rate</label>
+        <p>${{rate}}.00</p>
+      </div>
+      <div class="col-md-2">
+        <label>Lesson</label>
+        <p>{{lesson}}</p>
+      </div>
+      <div class="col-md-2">
+        <label>Deposit</label>
+        <p>{{deposit}}</p>
+      </div>
+      <div class="col-md-2">
+        <a class="delete-group">x</a>
+      </div>
+    </div>
+    <hr/>
+    {{/each}}
+  </div>
+
+</template>

@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+#header{
+  text-align: center;
+  margin: 50px 0 0;
+}
+
+.form-group{
+  margin-top: 15px;
+}
+
+.btn-margin-top{
+  margin-top: 20px;
+}
+
+body{
+  background-color: #F0F1F5;
+}
+
+.container{
+  margin-top: 30px;
+  padding: 30px;
+  height: 500px;
+}
+
+.col-md-2 {
+  margin-top: 10px;
+}
+
+.btn-info{
+  margin-bottom: 10px;
+}
+
+hr {
+  color: black;
+}
+
+#form-link {
+  margin-left: 50px;
+  padding-top: 20px;
+}

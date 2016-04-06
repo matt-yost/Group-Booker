@@ -1,0 +1,129 @@
+<head>
+  <title>Parties</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<template name="main">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor route='home'}}">Groups</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="{{pathFor route='form'}}">New Group</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Select Month <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{pathFor route='january'}}">January</a></li>
+              <li><a href="{{pathFor route='february'}}">February</a></li>
+              <li><a href="{{pathFor route='march'}}">March</a></li>
+              <li><a href="{{pathFor route='april'}}">April</a></li>
+              <li><a href="{{pathFor route='may'}}">May</a></li>
+              <li><a href="{{pathFor route='june'}}">June</a></li>
+              <li><a href="{{pathFor route='july'}}">July</a></li>
+              <li><a href="{{pathFor route='august'}}">August</a></li>
+              <li><a href="{{pathFor route='september'}}">September</a></li>
+              <li><a href="{{pathFor route='october'}}">October</a></li>
+              <li><a href="{{pathFor route='november'}}">November</a></li>
+              <li><a href="{{pathFor route='december'}}">December</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <body>
+    {{> yield}}
+  </body>
+</template>
+
+<template name="home">
+  <!-- Add Sign in page -->
+</template>
+<template name="form">
+  <div class="container">
+    <form class="new-group">
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <label>Contact Name</label>
+          <input type="text" name="contactName" class="form-control"/>
+        </div>
+        <div class="col-md-4 form-group">
+          <label>Contact Email</label>
+          <input type="email" name="contactEmail" class="form-control"/>
+        </div>
+        <div class="col-md-4 form-group">
+          <label>Group Name</label>
+          <input type="text" name="groupName" class="form-control"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phoneNumber" class="form-control"/>
+        </div>
+        <div class="col-md-3 form-group">
+          <label>Rate</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="number" name="rate" class="form-control"/>
+          </div>
+        </div>
+        <div class="col-md-3 form-group">
+          <label>Lesson</label>
+          <select name="lesson" class="form-control">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="col-md-3 form-group">
+          <label>Deposit</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="number" name="deposit" class="form-control"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 form-group">
+          <label>Month</label>
+          <select name="groupMonth" class="form-control">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+        </div>
+        <div class="col-md-3 form-group">
+          <label>Day</label>
+          <input type="number" name="groupDay" class="form-control" max="31">
+        </div>
+        <div class="col-md-3 form-group">
+          <label>Timeslot</label>
+          <input type="text" name="timeslot" class="form-control"/>
+        </div>
+        <div class="col-md-3 form-group">
+          <label>Number of Guest</label>
+          <input type="number" name="numberOfGuest" class="form-control"/>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success btn-margin-top">Submit</button>
+    </form>
+  </div>
+</template>
